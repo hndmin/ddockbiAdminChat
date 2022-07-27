@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="kr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+
+    <title>Testing</title>
+
+  </head>
+  <!---------------------------------------------------------------------------------->
+  <!---------------------------------------------------------------------------------->
+  <!---------------------------------------------------------------------------------->
+  <body>
+
+
+    <!-------------------------------------------------------------------------------->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">BITBIT!</a>
+        
+      </div>
+    </nav> -->
+    <!-------------------------------------------------------------------------------->
+
+    <div id="main2" class="containerx">
+      <div class="row">
+        <div id="" class="col1 col-12 col-lg-4">
+          <section id="profile" class="" onclick="focusOff()">
+            <div class="head">
+              <div class="imgFrame">
+                <img src="./src/img/profile.jpeg" alt="">
+              </div>
+              <dl>
+                <dt>
+                  이향범
+                </dt>
+                <dd>
+                  SKT 010-8346-5255
+                </dd>
+              </dl>
+            </div>
+            <form class="body">
+              <div class="input mb-3">
+                <label for="profileInput1" class="form-label">이름</label>
+                <input type="" class="form-control" id="profileInput1" value="이향범">
+              </div>
+              <div class="input mb-3">
+                <label for="profileInput2" class="form-label">성별</label>
+                <input type="" class="form-control" id="profileInput2" value="남자">
+              </div>
+              <div class="input mb-3">
+                <label for="profileInput3" class="form-label">생년월일</label>
+                <input type="" class="form-control" id="profileInput3" value="1963.02.11">
+              </div>
+              <div class="input mb-3">
+                <label for="profileInput4" class="form-label">전화번호</label>
+                <div class="col-group">
+                  <div class="form-floating">
+                    <select class="form-select" id="profileInput4Select">
+                      <option selected>통신사</option>
+                      <option value="1">SKT</option>
+                      <option value="2">KT</option>
+                      <option value="3">LG U+</option>
+                    </select>
+                  </div>
+                  <div class="form-floating">
+                    <input type="" class="form-control" id="profileInput4" value="01083465255">
+                  </div>
+                </div>
+              </div>
+              <div class="input mb-3">
+                <label for="profileInput1" class="form-label">주소</label>
+                <input type="" class="form-control" id="profileInput1" value="경기도 고양시 덕양구 에베베베ㅔ베 202-7">
+              </div>
+              <div class="input mb-3">
+                <label for="profileInput1" class="form-label">배달 시 </br>주의사항</label>
+                <input type="" class="form-control" id="profileInput1" value="문 앞에 두고 노크해주세요">
+              </div>
+              <div class="input mb-3">
+                <label for="profileInput1" class="form-label">그 외 주소</label>
+                <input type="" class="form-control" id="profileInput1" value="경기도 고양시 덕양구 에베베베ㅔ베 202-7">
+              </div>
+              <div class="input mb-3">
+                <label for="profileInput1" class="form-label">추천인</label>
+                <input type="" class="form-control" id="profileInput1" value="010-8346-5255">
+              </div>
+              <div class="input mb-3">
+                <label for="profileInput1" class="form-label">가입일자</label>
+                <input type="" class="form-control" id="profileInput1" value="2022.03.22">
+              </div>
+
+              <div class="input mb-4">
+                <label for="exampleFormControlTextarea1" class="form-label">특이사항</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value="아침인사 거부"></textarea>
+              </div>
+
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary" disabled>Submit</button>
+                <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+              </div>
+
+            </form>
+          </section>
+          <!----------------------------------------------------------------------------------------------------->
+          <!----------------------------------------------------------------------------------------------------->
+          <section id="list"  class="" onclick="listFocus()">
+            <ul class="head nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">주문내용</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">달력</button>
+              </li>
+            </ul>
+            <!----------------->
+            <div class="body tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <!----------------->
+              <!----------------->
+              <div class="classify btn-group" role="group" aria-label="Button group with nested dropdown">
+                <!---->
+                <button type="radio" class="btn btn-outline-primary">전체</button>
+                <!---->
+                <div class="btn-group" role="group">
+                  <button type="radio" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    구매
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">물품구매</a></li>
+                    <li><a class="dropdown-item" href="#">음식배달</a></li>
+                    <li><a class="dropdown-item" href="#">장보기</a></li>
+                  </ul>
+                </div>
+                <!---->
+                <div class="btn-group" role="group">
+                  <button type="radio" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    예약
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">예약</a></li>
+                    <li><a class="dropdown-item" href="#">티켓팅</a></li>
+                  </ul>
+                </div>
+                <!---->
+                <div class="btn-group" role="group">
+                  <button type="radio" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    검색
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">추천</a></li>
+                    <li><a class="dropdown-item" href="#">검색</a></li>
+                  </ul>
+                </div>
+                <!---->
+              </div>
+              <!----------------->
+              <!----------------->
+                <div class="list-group">
+                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <!---->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          <div class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1">7월 16일</h5>
+                            </div>
+                            <p class="mb-1">주문 처리 내용 ~~~~~~~~~DFSDFSFSDFS</p>
+                            <small class="point">13,000원</small>
+                          </div>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          helllloooo
+                          helllloooo
+                          helllloooo
+                          helllloooo
+                          helllloooo
+                          helllloooo
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <!---->
+                    <!---->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                  
+                </div>
+              <!----------------->
+              <!----------------->
+              </div>
+              <!------->
+              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                달력
+              </div>
+            </div>
+            <!----------------->
+          </section>
+        </div>
+        <div id="" class="col2 col-12 col-lg-4">
+          <section id="chat">
+            hello
+          </section>
+        </div>
+        <div id="" class="col3 col-12 col-lg-4">
+          <section id="input">
+            input
+          </section>
+        </div>
+
+      </div>
+    </div>
+      
+
+
+    
+    
+
+
+
+
+
+    <!------------------------------------ SCRIPT ---------------------------------------------->
+    <script src="./script.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!------------------------------------ SCRIPT ---------------------------------------------->
+  </body>
+</html>
