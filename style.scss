@@ -10,6 +10,7 @@ $upColor: #dc3545;
 $downColor: #0d6efd;
 
 
+
 @mixin border-side{
     border-right: 1px solid rgba(0,0,0,.1);
     border-left: 1px solid rgba(0,0,0,.1);
@@ -134,6 +135,23 @@ $downColor: #0d6efd;
             }
         }
     }
+}
+
+@mixin typoSecIcon{
+    margin-right: 1rem;
+    font-size: 4rem;
+    color: $primary;
+}
+@mixin typoSecTitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+@mixin typoSecBody{
+    font-size: 1.3rem;
+    line-height: 1.7;
+    letter-spacing: -0.3px;
+    color: rgba(0,0,0,0.75);
 }
 
 *{
@@ -560,13 +578,10 @@ body{
                                 max-height: 4.5rem;
                                 margin-bottom: 0.75rem;
                                 span{
-                                    margin-right: 1rem;
-                                    font-size: 4rem;
-                                    color: $primary;
+                                    @include typoSecIcon();
                                 }
                                 p{
-                                    font-size: 1.5rem;
-                                    line-height: 1.4;
+                                    @include typoSecTitle();
                                 }
                             }
                             button{
@@ -761,7 +776,7 @@ body{
                     &.voice{
                         display: flex;
                         align-items: center;
-                        width: 60%;
+                        width: 70%;
                         padding: 0.5rem;
                         .icon{
                             height: 50px;
@@ -798,9 +813,7 @@ body{
                     border-radius: 1rem 0 1rem 1rem;
                     border: 1px solid rgba(0, 0, 0, 0.1);
 
-                    color: rgba(0,0,0,0.75);
-
-                    font-size: 1.3rem;
+                    @include typoSecBody();
                     &.voice{
                         background-color: $primary;
 
@@ -940,11 +953,12 @@ body{
             }
         }
     }
-
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    /// 전체 레이아웃 설정
+    //////////////////////////////////////////////////////////////////////////////////////////////
     .col1, .col2, .col3{
         position: relative;
     }
-
     .col1{
         z-index: 1000;
         box-shadow: 7px 0px 12px 1px rgba(0, 0, 0, 0.1);
@@ -990,8 +1004,17 @@ body{
             border-top: 1px solid rgba(0,0,0,.1);
         }
     }
+    //////////////////////////////////////////////////////////////////////////////////////////////
+    /// 전체 레이아웃 설정
+    //////////////////////////////////////////////////////////////////////////////////////////////
 }
+
+
+
+
+
 /////////////////////////////////////////////////////////
+/// 추가 입력  옵션 모달입니다
 .modal-backdrop {
     width: calc((100% / 12) * 7);
     left: calc(100% - ((100% / 12) * 7));
@@ -1007,7 +1030,6 @@ body{
     background-color: #000;
 
 }
-/////////////////////////////////////////////////////////
 .modal{
     width: calc((100% / 12) * 7);
     left: calc(100% - ((100% / 12) * 7));
@@ -1032,9 +1054,12 @@ body{
             //border-radius: 0.3rem 0.3rem 0 0; 
             border-radius: 0.5rem;
 
-            .modal-header{
-                border-bottom: 0;
+            .btn-close{
+                position: absolute;
+                z-index: 2000;
+                right: 0%;
                 
+                padding: 1rem;
             }
             .modal-body{
                 display: flex;
@@ -1050,7 +1075,7 @@ body{
                 #sendMedia{
                     ul{
                         width: 100%;
-                        padding: 0 8%;
+                        padding: 0 2%;
                         li{
                             width: 25%;
                             button{
@@ -1061,28 +1086,71 @@ body{
                     }
                     .tab-content{
                         .tab-pane{
+                            height: 100%;
+                            .sendBtn{
+                                width: 100%;
+                                padding: 1rem;
+                            }
+                            ////////////////////////////////////////////////////////////
+                            &:nth-of-type(1){
+                                .head{
+                                    .btn{
+                                        border: none;
+                                        padding: 0;
+                                        transition: 0.2s;
+                                        span{
+                                            @include typoSecIcon();
+                                            transition: 0.2s;
+                                        }
+                                        &:hover{
+                                            background-color: transparent;
+
+                                            span{
+                                                color: $primaryText;
+                                            }
+                                        }
+                                    }
+                                    textarea{
+                                        @include typoSecTitle();
+                                    }
+                                }
+                                .body{
+                                    width: 100%;
+                                    padding: 0.5rem;
+                                    border-radius: 0.25rem;
+
+                                    @include typoSecBody();
+                                    //border: 1px solid rgba(0, 0, 0, 0.1);
+                                }
+                            }
+                            ////////////////////////////////////////////////////////////
                             &:nth-of-type(2){
                                 .carousel{
+                                    height: 50%;
                                     border-radius: 0.5rem;
                                     overflow: hidden;
-                                    
 
-
-                                    background-color: rgba(0, 0, 0, 0.1);
+                                    background-color: rgba(0, 0, 0, 0.2);
                                     .carousel-item{
+                                        height: 100%;
                                         //min-height: 28rem;
                                         img{
-                                            //height: 28rem;
+                                            height: 20rem;
                                             object-fit: contain;
                                         }
                                     }
                                 }
+                                p{
+                                    color: $primaryText;
+                                    text-align: center;
+                                }
+
                                 .fileDrop{
                                     display: flex;
                                     flex-direction: column;
                                     justify-content: center;
                                     align-items: center;
-                                    min-height: 15rem;
+                                    min-height: 10rem;
 
                                     background-color: $primaryBase;
                                     border: 4px dashed $primary;
@@ -1102,6 +1170,40 @@ body{
 
                                     &:hover{
                                         border: 4px dashed $primary;
+                                    }
+                                }
+                            }
+                            ////////////////////////////////////////////////////////////
+                            &:nth-of-type(3){
+                                .voiceRecord{
+                                    display: flex;
+                                    align-items: center;
+                                    padding: 0.5rem;
+                                    
+                                    background-color: $primary;
+                                    border-radius: 1rem 0 1rem 1rem;
+                                    overflow: hidden;
+                                    .icon{
+                                        height: 50px;
+                                        padding: 0;
+                                        margin-right: 0.5rem;
+                                        color: #ffffff;
+                                        span{
+                                            font-size: 3rem;
+                                        }
+                                    }
+                                    .progressBar{
+                                        margin-right: 1rem;
+                                    }
+                                }
+                                .recordBtnGroup{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    .btn{
+                                        display: flex;
+                                        margin: 0 0.25rem;
+
                                     }
                                 }
                             }

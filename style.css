@@ -676,6 +676,7 @@ body {
 
 #main #chat .chatZone .msg .msgBox.withTitle dl dt p {
   font-size: 1.5rem;
+  font-weight: 600;
   line-height: 1.4;
 }
 
@@ -913,7 +914,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60%;
+  width: 70%;
   padding: 0.5rem;
 }
 
@@ -953,8 +954,10 @@ body {
   background-color: #ffffff;
   border-radius: 1rem 0 1rem 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.75);
   font-size: 1.3rem;
+  line-height: 1.7;
+  letter-spacing: -0.3px;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 #main #chat .chatZone .sec .msgBox.voice {
@@ -1172,8 +1175,11 @@ body {
   border-radius: 0.5rem;
 }
 
-.modal .modal-dialog .modal-content .modal-header {
-  border-bottom: 0;
+.modal .modal-dialog .modal-content .btn-close {
+  position: absolute;
+  z-index: 2000;
+  right: 0%;
+  padding: 1rem;
 }
 
 .modal .modal-dialog .modal-content .modal-body {
@@ -1193,7 +1199,7 @@ body {
 
 .modal .modal-dialog .modal-content .modal-body #sendMedia ul {
   width: 100%;
-  padding: 0 8%;
+  padding: 0 2%;
 }
 
 .modal .modal-dialog .modal-content .modal-body #sendMedia ul li {
@@ -1205,15 +1211,74 @@ body {
   text-align: center;
 }
 
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane {
+  height: 100%;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane .sendBtn {
+  width: 100%;
+  padding: 1rem;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(1) .head .btn {
+  border: none;
+  padding: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(1) .head .btn span {
+  margin-right: 1rem;
+  font-size: 4rem;
+  color: #9FD800;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(1) .head .btn:hover {
+  background-color: transparent;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(1) .head .btn:hover span {
+  color: #8BB120;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(1) .head textarea {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(1) .body {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  letter-spacing: -0.3px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
 .modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(2) .carousel {
+  height: 50%;
   border-radius: 0.5rem;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(2) .carousel .carousel-item {
+  height: 100%;
 }
 
 .modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(2) .carousel .carousel-item img {
+  height: 20rem;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(2) p {
+  color: #8BB120;
+  text-align: center;
 }
 
 .modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(2) .fileDrop {
@@ -1230,7 +1295,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 15rem;
+  min-height: 10rem;
   background-color: #ECF7CC;
   border: 4px dashed #9FD800;
   border-radius: 0.5rem;
@@ -1251,5 +1316,50 @@ body {
 
 .modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(2) .fileDrop:hover {
   border: 4px dashed #9FD800;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(3) .voiceRecord {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  background-color: #9FD800;
+  border-radius: 1rem 0 1rem 1rem;
+  overflow: hidden;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(3) .voiceRecord .icon {
+  height: 50px;
+  padding: 0;
+  margin-right: 0.5rem;
+  color: #ffffff;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(3) .voiceRecord .icon span {
+  font-size: 3rem;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(3) .voiceRecord .progressBar {
+  margin-right: 1rem;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(3) .recordBtnGroup {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .modal-dialog .modal-content .modal-body #sendMedia .tab-content .tab-pane:nth-of-type(3) .recordBtnGroup .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0.25rem;
 }
 /*# sourceMappingURL=style.css.map */
